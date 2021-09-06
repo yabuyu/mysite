@@ -10,7 +10,7 @@
   position: relative;
 }
 
-ul {
+.container ul {
   list-style:none;
   margin: 0;
   padding: 0;
@@ -19,12 +19,12 @@ ul {
   transition: transform .3s;
 }
 
-li {
+.container li {
   height: 100%;
   min-width: 100%;
 }
 
-li img{
+.container li img{
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -47,8 +47,6 @@ li img{
 #next:hover{
   opacity: 0.8;
 }
-
-
 
 #prev{
   left: 0;
@@ -81,7 +79,54 @@ nav button{
 nav .current{
   background: #999;
 }
+/* ↓↓↓↓↓タブ↓↓↓↓↓ */
+body{
+  font-size:14px;
+}
 
+.container2{
+  margin:30px auto;
+  width:500px;
+}
+.menu {
+  list-style: none;
+  padding: 0px;
+  margin:0px;
+  display:flex;
+}
+.menu li a{
+  display:inline-block;
+  width: 100px;
+  text-align: center;
+  padding:8px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu li a.active{
+  background:#333;
+  color:#fff;
+}
+.menu li a:not(.active):hover{ /* activeじゃないものにhoverした際の設定 */
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+
+.content.active{ /* ここは、.content.activeと、つなげて書かないといけない。 */
+  background:#333;
+  color:#fff;
+  min-height: 150px;
+  display:block;
+  padding: 8px 0;
+  border-radius: 4px 4px 0 0;
+}
+
+
+.content{
+  display:none;
+}
+
+/* ↓↓↓↓↓FAQ↓↓↓↓↓ */
 h1{
   font-size: 18px;
   border-bottom: 1px solid;
